@@ -7,5 +7,11 @@ public class Hero {
         this.hp = 100;
     }
 
+    public void attack(Enemy e) {
+        System.out.println(this.name + "の攻撃");
+        e.hp -= 20;
+        System.out.println("敵のHP : " + e.hp);
+    }
+
     
 }

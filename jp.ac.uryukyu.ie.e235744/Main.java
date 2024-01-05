@@ -6,6 +6,14 @@ public class Main {
         System.out.println("こんにちは 勇者" + n + " さん");
         Hero h = new Hero(n);
 
+        //敵のインスタンス作成
+        Enemy e = new Enemy();
+
+        e.attack(h);
+        h.attack(e);
+        
+
+
         
     }
 }
