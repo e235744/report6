@@ -13,5 +13,11 @@ public class Hero {
         System.out.println("敵のHP : " + e.hp);
     }
 
+    public void heal() {
+        System.out.println("勇者は回復した");
+        this.hp += 50;
+        System.out.println("勇者のHP :" + this.hp);
+    }
+
     
 }

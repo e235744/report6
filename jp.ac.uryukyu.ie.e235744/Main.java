@@ -9,11 +9,23 @@ public class Main {
         //敵のインスタンス作成
         Enemy e = new Enemy();
 
-        e.attack(h);
-        h.attack(e);
-        
+        //敵と遭遇
+        for (int i = 0; i < 10; i++) {
+            System.out.println("どうする？");
+            System.out.println("1:攻撃する 2:回復する");
+            int m = new java.util.Scanner(System.in).nextInt();
 
+            switch (m) {
+                case 1:
+                h.attack(e);
+                e.attack(h);
+                break;
 
-        
+                case 2:
+                h.heal();
+                e.attack(h);
+                break;
+            }
+        }
     }
 }
