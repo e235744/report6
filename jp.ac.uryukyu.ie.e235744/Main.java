@@ -10,11 +10,15 @@ public class Main {
         Enemy e = new Enemy();
 
         //敵と遭遇
+        System.out.println("野生の" + e.name + "が現れた");
         for (int i = 0; i < 10; i++) {
+            System.out.println(h.name + "のHP : " + h.hp);
+            System.out.println(e.name + "のHP : " + e.hp);
             System.out.println("どうする？");
             System.out.println("1:攻撃する 2:回復する");
             int m = new java.util.Scanner(System.in).nextInt();
 
+            //1を入力したら攻撃,2を入力したら回復
             switch (m) {
                 case 1:
                 h.attack(e);
