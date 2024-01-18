@@ -1,3 +1,5 @@
+package jp.ac.uryukyu.ie.e235744;
+
 public class Enemy {
     String name;
     int hp = 100;

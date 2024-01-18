@@ -1,3 +1,5 @@
+package jp.ac.uryukyu.ie.e235744;
+
 public class Main {
     public static void main(String[] args) {
         /* 勇者と敵のインスタンス作成*/
@@ -41,3 +43,4 @@ public class Main {
         }
     }
 }
+

@@ -1,3 +1,5 @@
+package jp.ac.uryukyu.ie.e235744;
+
 public class Hero {
     String name;
     int hp;
@@ -5,9 +7,7 @@ public class Hero {
     int damage;
 
     public Hero() {
-        /*勇者の初期設定
-         * 名前の入力
-         */
+        /*勇者の初期設定*/
         this.hp = 100;
         this.heal = 50;
         this.damage = 20;
@@ -27,7 +27,7 @@ public class Hero {
     }
 
     public void heal() {
-        /*HPを回復する */
+        /*HPを回復する*/
         int m = Math.min(100 - hp, heal);
         System.out.println(name + "は" + m + "回復した");
         this.hp += m;
