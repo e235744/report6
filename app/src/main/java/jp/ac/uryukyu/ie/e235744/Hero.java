@@ -1,10 +1,14 @@
 package jp.ac.uryukyu.ie.e235744;
 
 public class Hero {
-    String name;
-    int hp;
-    int heal;
-    int damage;
+    /*名前
+     * HP
+     * 回復量
+     * 与えるダメージ量*/
+    private String name;
+    private int hp;
+    private int heal;
+    private int damage;
 
     public Hero() {
         /*勇者の初期設定*/
@@ -19,10 +23,10 @@ public class Hero {
 
     public void attack(Enemy e) {
         /*相手に攻撃する*/
-        if (e.hp > 0 && hp >= 0) {
+        if (hp > 0) {
             System.out.println(this.name + "の攻撃 " + damage + "ダメージ与えた");
-            e.hp -= damage;
-            System.out.println(e.name + "のHP : " + e.hp);
+            e.damaged(damage);
+            System.out.println(e.getName() + "のHP : " + e.getHp());
         }
     }
 
@@ -32,5 +36,27 @@ public class Hero {
         System.out.println(name + "は" + m + "回復した");
         this.hp += m;
         System.out.println(name + "のHP : " + hp);
+    }
+    
+     /*プライベートにしたフィールドを返す 
+     * 名前
+     * HP
+     * 与えるダメージ量
+     * ダメージを受けるための関数
+    */
+    public String getName() {
+        return this.name;
+    }
+
+    public int getHp() {
+        return this.hp;
+    }
+
+    public int getDamage() {
+        return this.damage;
+    }
+
+    public void damaged(int damage) {
+        hp -= damage;
     }
 }

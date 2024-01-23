@@ -48,6 +48,6 @@ tasks.named<Test>("test") {
 
 tasks.withType<Jar> {
     manifest {
-        attributes["Main-Class"] = "jp.ac.uryukyu.ie.e235744.App"
+        attributes["Main-Class"] = "Main"
     }
 }
